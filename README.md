@@ -20,8 +20,8 @@
         - Google APIs Intel x86 Atom_64 System Image
 
 3. Setting Environment Variable
-  1. Go Advanced System setting 
-      2. Open Advanced Tap 
+    1. Go Advanced System setting 
+    2. Open Advanced Tap 
     3. Click 'Environment Variable' button 
     4. Click 'New' button below User Variables
     5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
@@ -55,7 +55,7 @@
         - Google APIs Intel x86 Atom_64 System Image
 
 3. Setting Environment Variable to android studio
-    1. Find and Open '~/.bash_profile' or '~/.zshrc' file
+    1. Find and Open **~/.bash_profile** or **~/.zshrc** file
     2. Add this code
 
 ```
