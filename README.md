@@ -16,11 +16,11 @@
     3. Check show package Details 
     4. Find List below and Check them
 
-**list**
-    - Android SDK Platform 28
-    - Intel x86 Atom System Image
-    - Google APIs Intel x86 Atom System Image
-    - Google APIs Intel x86 Atom_64 System Image
+>  **list**
+>    - Android SDK Platform 28
+>    - Intel x86 Atom System Image
+>    - Google APIs Intel x86 Atom System Image
+>    - Google APIs Intel x86 Atom_64 System Image
 
 3. Setting Environment Variable
     1. Go Advanced System setting 
