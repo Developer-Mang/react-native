@@ -57,7 +57,7 @@
     3. Setting Environment Variable to android studio
         1. Find and Open '~/.bash_profile' or '~/.zshrc' file
         2. Add this code
-        
+
 ```
   # export ANDROID_HOME=$HOME/Library/Android/sdk
   export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
@@ -68,9 +68,9 @@
 ```
 
     4. Conect Cell phone using USB or run amulator
-    ```bash
-      $ npm run android
-    ```
+```bash
+  $ npm run android
+```
 
 <!-- ## React-native Window에서 실행하는 법
 
