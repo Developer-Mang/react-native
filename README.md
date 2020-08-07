@@ -3,14 +3,18 @@
 ## How to start React-native for window
 
   1. Need some tools and program
-    - node
-    - python
+    - Chocolatey 
+    - Node
+    - Python
     - React-Native-CLI
     - JDK (JAVA DEVELOPE KIT)
     - android studio
 
   2. Setting android studio
-    Configure > SDK Manger > Check show package Details > Find List below and Check them
+    1. Go Configure 
+    2. Click SDK Manger 
+    3. Check show package Details 
+    4. Find List below and Check them
 
   **list**
     - Android SDK Platform 28
@@ -19,17 +23,21 @@
     - Google APIs Intel x86 Atom_64 System Image
 
   3. Setting Environment Variable
-    Advanced System setting > Advanced Tap >
-    Check 'Environment Variable' button > 
-    Check 'New' button below User Variables >
-    Make Variable name 'ANDROID_HOME' to set value android sdk loaction >
-    *if you can't find location, you can find using android studio SDK manger belong Configure*
-    Edit Path in User variables > Create platform-tools location below sdk location
+    1. Go Advanced System setting 
+    2. Open Advanced Tap 
+    3. Click 'Environment Variable' button 
+    4. Click 'New' button below User Variables
+    5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
+      *if you can't find location, you can find using android studio SDK manger belong Configure*
+    6. Edit Path in User variables > Create platform-tools location below sdk location
 
   4. Conect Cell phone using USB and run project
-    $ npm run android
+  
+  ```bash
+  $ npm run android
+  ```
 
-## React-native Window에서 실행하는 법
+<!-- ## React-native Window에서 실행하는 법
 
   1. 프로그램 실행에 필요한 패키지 툴과 프로그램 설치하기
     - node
@@ -78,15 +86,15 @@
     - Google APIs Intel x86 Atom_64 System Image
 
   3. 안드로이드 스튜디오 환경 변수 
-    1. ~/.bash_profile 파일 또는 ~/.zshrc 파일을 연다.
-    2. 아래와 같이 파일을 수정한다.
-    ```
-      # export ANDROID_HOME=$HOME/Library/Android/sdk
-      export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
-      export PATH=$PATH:$ANDROID_HOME/emulator
-      export PATH=$PATH:$ANDROID_HOME/tools
-      export PATH=$PATH:$ANDROID_HOME/tools/bin
-      export PATH=$PATH:$ANDROID_HOME/platform-tools
-    ```
+      1. ~/.bash_profile 파일 또는 ~/.zshrc 파일을 연다.
+      2. 아래와 같이 파일을 수정한다.
+```
+  # export ANDROID_HOME=$HOME/Library/Android/sdk
+  export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
   4. USB를 연결해 PC와 핸드폰을 연결 후에 react-native 파일 실행
-    $npm run android
+    $npm run android -->
