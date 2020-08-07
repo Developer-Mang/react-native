@@ -30,7 +30,7 @@
 4. Conect Cell phone using USB and run project
   $ npm run android
 
-## React-native 원도우에서 실행하는 법
+## React-native Window에서 실행하는 법
 
 1. 프로그램 실행에 필요한 패키지 툴과 프로그램 설치하기
   - node
@@ -56,5 +56,40 @@
   사용자 변수 중에 'Path'를 찾아 클릭 후 변경 > 
   위에 언급한 SDK 폴더 하위에 있는 platform-tools 위치를 추가
 
+4. USB를 연결해 PC와 핸드폰을 연결 후에 react-native 파일 실행
+  $npm run android
+
+## React-native Mac에서 실행하는 법
+
+1. 프로그램 실행에 필요한 패키지 툴과 프로그램 설치하기
+  - node
+  - Watchman 
+  - Xcode 
+  - Cocoapods 
+  - React-Native-CLI
+  - JDK (JAVA DEVELOPE KIT)
+
+  and android studio
+
+2. Android Studio 설정하기
+  Configure 클릭 > SDK Manger 클릭 > 우측하단에 show package Details 체크 > 아래 리스트를 찾아 체크 후 다운로드
+
+**list**
+- Android SDK Platform 28
+- Intel x86 Atom System Image
+- Google APIs Intel x86 Atom System Image
+- Google APIs Intel x86 Atom_64 System Image
+
+3. 안드로이드 스튜디오 환경 변수 설정
+  1. ~/.bash_profile 파일 또는 ~/.zshrc 파일을 연다.
+  2. 아래와 같이 파일을 수정한다.
+  ```
+    # export ANDROID_HOME=$HOME/Library/Android/sdk
+    export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
+    export PATH=$PATH:$ANDROID_HOME/emulator
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+  ```
 4. USB를 연결해 PC와 핸드폰을 연결 후에 react-native 파일 실행
   $npm run android
