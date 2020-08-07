@@ -29,9 +29,10 @@
         6. Edit Path in User variables > Create platform-tools location below sdk location
 
     4. Conect Cell phone using USB or run amulator
-    ```bash
-      $ npm run android
-    ```
+
+```bash
+  $ npm run android
+```
 
 ## How to start React-native for Mac
     1. Install some tools and programs
@@ -56,14 +57,15 @@
     3. Setting Environment Variable to android studio
         1. Find and Open '~/.bash_profile' or '~/.zshrc' file
         2. Add this code
-            ```
-              # export ANDROID_HOME=$HOME/Library/Android/sdk
-              export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
-              export PATH=$PATH:$ANDROID_HOME/emulator
-              export PATH=$PATH:$ANDROID_HOME/tools
-              export PATH=$PATH:$ANDROID_HOME/tools/bin
-              export PATH=$PATH:$ANDROID_HOME/platform-tools
-            ```
+        
+```
+  # export ANDROID_HOME=$HOME/Library/Android/sdk
+  export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
+  export PATH=$PATH:$ANDROID_HOME/emulator
+  export PATH=$PATH:$ANDROID_HOME/tools
+  export PATH=$PATH:$ANDROID_HOME/tools/bin
+  export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
 
     4. Conect Cell phone using USB or run amulator
     ```bash
