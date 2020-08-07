@@ -7,7 +7,26 @@
     - Python
     - React-Native-CLI
     - JDK (JAVA DEVELOPE KIT)
-    - android studio
+    - Android studio
+
+```bash
+  # Chocolatey
+  @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"$ npm run android
+
+  # Node
+  choco install -y nodejs.install
+
+  # Python
+  choco install -y python2
+
+  # React-Native-CLI
+  npm install -g react-native-cli
+
+  # JDK
+  choco install -y jdk8
+```
+
+- Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)
 
 2. Setting android studio
     1. Go Configure 
@@ -36,13 +55,38 @@
 
 ## How to start React-native for Mac
 1. Install some tools and programs
+    - Homebrew 
     - node
     - Watchman
     - Xcode
     - Cocoapods
     - React-Native-CLI
     - JDK (JAVA DEVELOPE KIT)
-    - android studio
+    - Android studio
+
+```bash
+  # Homebrew 
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  # Node
+  brew install node
+
+  # Watchman
+  brew install watchman
+
+  # React-Native-CLI
+  npm install -g react-native-cli
+
+  # Cocoapods
+  sudo gem install cocoapods
+
+  # JDK
+  brew tap AdoptOpenJDK/openjdk
+  brew cask install adoptopenjdk8
+```
+- Xcode DownLoad Link : [https://apps.apple.com/us/app/xcode/id497799835?mt=12](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+
+- Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)
 
 2. Setting android studio
     1. Go Configure 
