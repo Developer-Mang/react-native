@@ -1,62 +1,62 @@
 # Study React-native
 
 ## How to start React-native for window
-    1. Install some tools and programs
-        - Chocolatey 
-        - Node
-        - Python
-        - React-Native-CLI
-        - JDK (JAVA DEVELOPE KIT)
-        - android studio
+1. Install some tools and programs
+    - Chocolatey 
+    - Node
+    - Python
+    - React-Native-CLI
+    - JDK (JAVA DEVELOPE KIT)
+    - android studio
 
-    2. Setting android studio
-        1. Go Configure 
-        2. Click SDK Manger 
-        3. Check show package Details 
-        4. Find Lists below and Check them
-            - Android SDK Platform 28
-            - Intel x86 Atom System Image
-            - Google APIs Intel x86 Atom System Image
-            - Google APIs Intel x86 Atom_64 System Image
+2. Setting android studio
+    1. Go Configure 
+    2. Click SDK Manger 
+    3. Check show package Details 
+    4. Find Lists below and Check them
+        - Android SDK Platform 28
+        - Intel x86 Atom System Image
+        - Google APIs Intel x86 Atom System Image
+        - Google APIs Intel x86 Atom_64 System Image
 
-    3. Setting Environment Variable
-        1. Go Advanced System setting 
-        2. Open Advanced Tap 
-        3. Click 'Environment Variable' button 
-        4. Click 'New' button below User Variables
-        5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
-            *if you can't find location, you can find using android studio SDK manger belong Configure*
-        6. Edit Path in User variables > Create platform-tools location below sdk location
+3. Setting Environment Variable
+  1. Go Advanced System setting 
+      2. Open Advanced Tap 
+    3. Click 'Environment Variable' button 
+    4. Click 'New' button below User Variables
+    5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
+        *if you can't find location, you can find using android studio SDK manger belong Configure*
+    6. Edit Path in User variables > Create platform-tools location below sdk location
 
-    4. Conect Cell phone using USB or run amulator
+4. Conect Cell phone using USB or run amulator
 
 ```bash
   $ npm run android
 ```
 
 ## How to start React-native for Mac
-    1. Install some tools and programs
-        - node
-        - Watchman
-        - Xcode
-        - Cocoapods
-        - React-Native-CLI
-        - JDK (JAVA DEVELOPE KIT)
-        - android studio
+1. Install some tools and programs
+    - node
+    - Watchman
+    - Xcode
+    - Cocoapods
+    - React-Native-CLI
+    - JDK (JAVA DEVELOPE KIT)
+    - android studio
 
-    2. Setting android studio
-        1. Go Configure 
-        2. Click SDK Manger 
-        3. Check show package Details 
-        4. Find Lists below and Check them
-            - Android SDK Platform 28
-            - Intel x86 Atom System Image
-            - Google APIs Intel x86 Atom System Image
-            - Google APIs Intel x86 Atom_64 System Image
+2. Setting android studio
+    1. Go Configure 
+    2. Click SDK Manger 
+    3. Check show package Details 
+    4. Find Lists below and Check them
+        - Android SDK Platform 28
+        - Intel x86 Atom System Image
+        - Google APIs Intel x86 Atom System Image
+        - Google APIs Intel x86 Atom_64 System Image
 
-    3. Setting Environment Variable to android studio
-        1. Find and Open '~/.bash_profile' or '~/.zshrc' file
-        2. Add this code
+3. Setting Environment Variable to android studio
+    1. Find and Open '~/.bash_profile' or '~/.zshrc' file
+    2. Add this code
 
 ```
   # export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -67,7 +67,7 @@
   export PATH=$PATH:$ANDROID_HOME/platform-tools
 ```
 
-    4. Conect Cell phone using USB or run amulator
+4. Conect Cell phone using USB or run amulator
 ```bash
   $ npm run android
 ```
