@@ -11,10 +11,10 @@
   - android studio
 
 2. Setting android studio
-  - 1. Go Configure 
-  - 2. Click SDK Manger 
-  - 3. Check show package Details 
-  - 4. Find List below and Check them
+> 1. Go Configure 
+> 2. Click SDK Manger 
+> 3. Check show package Details 
+> 4. Find List below and Check them
 
 **list**
   - Android SDK Platform 28
@@ -23,13 +23,13 @@
   - Google APIs Intel x86 Atom_64 System Image
 
 3. Setting Environment Variable
-  - 1. Go Advanced System setting 
-  - 2. Open Advanced Tap 
-  - 3. Click 'Environment Variable' button 
-  - 4. Click 'New' button below User Variables
-  - 5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
-    *if you can't find location, you can find using android studio SDK manger belong Configure*
-  - 6. Edit Path in User variables > Create platform-tools location below sdk location
+> 1. Go Advanced System setting 
+> 2. Open Advanced Tap 
+> 3. Click 'Environment Variable' button 
+> 4. Click 'New' button below User Variables
+> 5. Make Variable name 'ANDROID_HOME' to set value android sdk loaction
+> >*if you can't find location, you can find using android studio SDK manger belong Configure*
+> 6. Edit Path in User variables > Create platform-tools location below sdk location
 
 4. Conect Cell phone using USB or Run amulator
 
