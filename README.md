@@ -26,7 +26,7 @@
   choco install -y jdk8
 ```
 
-- Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)
+*Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)*
 
 **2. Setting android studio**
 1. Go Configure 
