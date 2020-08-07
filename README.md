@@ -84,9 +84,9 @@
   brew tap AdoptOpenJDK/openjdk
   brew cask install adoptopenjdk8
 ```
-- Xcode DownLoad Link : [https://apps.apple.com/us/app/xcode/id497799835?mt=12](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+*Xcode DownLoad Link : [https://apps.apple.com/us/app/xcode/id497799835?mt=12](https://apps.apple.com/us/app/xcode/id497799835?mt=12)*
 
-- Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)
+*Android studio DownLoad Link : [https://developer.android.com/studio](https://developer.android.com/studio)*
 
 **2. Setting android studio**
 1. Go Configure 
