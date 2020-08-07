@@ -82,8 +82,8 @@
 
 3. 안드로이드 스튜디오 환경 변수 
 
-  1. ~/.bash_profile 파일 또는 ~/.zshrc 파일을 연다.
-  2. 아래와 같이 파일을 수정한다.
+    1. ~/.bash_profile 파일 또는 ~/.zshrc 파일을 연다.
+    2. 아래와 같이 파일을 수정한다.
   ```
     # export ANDROID_HOME=$HOME/Library/Android/sdk
     export ANDROID_HOME=자신의 안드로이드SDK 위치/Android/sdk
