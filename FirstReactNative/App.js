@@ -24,6 +24,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import HellowWorld from 'HellowWorld';
+
 const App: () => React$Node = () => {
   return (
     <>
@@ -66,6 +68,7 @@ const App: () => React$Node = () => {
             </View>
             <LearnMoreLinks />
           </View>
+          <HellowWorld />
         </ScrollView>
       </SafeAreaView>
     </>
