@@ -8,7 +8,7 @@ const HellowComponents = () => {
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   // 플렛 리스트 컴포넌트
-  const DATA = [
+  const FlatDATA = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
       title: 'First Item',
@@ -29,6 +29,26 @@ const HellowComponents = () => {
   );
   const renderItem = ({item}) => <Item title={item.title} />;
 
+  // 세션 리스트 컴포넌트
+  const SectionDATA = [
+    {
+      title: 'Main dishes',
+      data: ['Pizza', 'Burger', 'Risotto'],
+    },
+    {
+      title: 'Sides',
+      data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+    },
+    {
+      title: 'Drinks',
+      data: ['Water', 'Coke', 'Beer'],
+    },
+    {
+      title: 'Desserts',
+      data: ['Cheese Cake', 'Ice Cream'],
+    },
+  ];
+
   return (
     <View
       style={{
@@ -48,9 +68,18 @@ const HellowComponents = () => {
       />
       <Text>리스트 컴포넌트</Text>
       <FlatList
-        data={DATA}
+        data={FlatDATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+      />
+      <Text>세션 리스트 컴포넌트</Text>
+      <SectionList
+        sections={SectionDATA}
+        keyExtractor={(item, index) => item + index}
+        renderItem={({item}) => <Item title={item} />}
+        renderSectionHeader={({section: {title}}) => (
+          <Text style={styles.header}>{title}</Text>
+        )}
       />
     </View>
   );
