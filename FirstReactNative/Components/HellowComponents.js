@@ -81,6 +81,11 @@ const HellowComponents = () => {
           <Text style={styles.header}>{title}</Text>
         )}
       />
+      <Text>로딩 이미지</Text>
+      <ActivityIndicator />
+      <ActivityIndicator size="large" />
+      <ActivityIndicator size="small" color="#0000ff" />
+      <ActivityIndicator size="large" color="#00ff00" />
     </View>
   );
 };
