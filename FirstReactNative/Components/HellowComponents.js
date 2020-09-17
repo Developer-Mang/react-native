@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, Switch, FlatList} from 'react-native';
+import {Text, View, Switch, FlatList, Alert} from 'react-native';
 
 const HellowComponents = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -49,6 +49,22 @@ const HellowComponents = () => {
     },
   ];
 
+  // Alert 버튼
+  const createTwoButtonAlert = () =>
+    Alert.alert(
+      'Alert Title',
+      'My Alert Msg',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      {cancelable: false},
+    );
+
   return (
     <View
       style={{
@@ -86,6 +102,8 @@ const HellowComponents = () => {
       <ActivityIndicator size="large" />
       <ActivityIndicator size="small" color="#0000ff" />
       <ActivityIndicator size="large" color="#00ff00" />
+      <Text>알림 버튼</Text>
+      <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
     </View>
   );
 };
