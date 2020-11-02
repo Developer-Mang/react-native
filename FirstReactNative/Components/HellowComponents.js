@@ -1,5 +1,36 @@
 import React, {useState} from 'react';
-import {Text, View, Switch, FlatList, Alert} from 'react-native';
+import {
+  Text,
+  View,
+  Switch,
+  FlatList,
+  Alert,
+  Animated,
+  Button,
+  StyleSheet,
+} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fadingContainer: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    backgroundColor: 'powderblue',
+  },
+  fadingText: {
+    fontSize: 28,
+    textAlign: 'center',
+    margin: 10,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    marginVertical: 16,
+  },
+});
 
 const HellowComponents = () => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -64,6 +95,25 @@ const HellowComponents = () => {
       ],
       {cancelable: false},
     );
+
+  // fadein/out
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  const fadeIn = () => {
+    // Will change fadeAnim value to 1 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 5000,
+    }).start();
+  };
+
+  const fadeOut = () => {
+    // Will change fadeAnim value to 0 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 5000,
+    }).start();
+  };
 
   return (
     <View
