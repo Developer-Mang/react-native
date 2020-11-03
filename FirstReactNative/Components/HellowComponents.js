@@ -8,6 +8,7 @@ import {
   Animated,
   Button,
   StyleSheet,
+  Dimensions,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -32,8 +33,13 @@ const styles = StyleSheet.create({
   },
 });
 
+// Dimensions
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 const HellowComponents = () => {
   const [isEnabled, setIsEnabled] = useState(false);
+  const [dimensions, setDimensions] = useState({window, screen});
 
   // 스위치 컴포넌트
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -115,6 +121,18 @@ const HellowComponents = () => {
     }).start();
   };
 
+  // dimension change
+  const onChange = ({window, screen}) => {
+    setDimensions({window, screen});
+  };
+
+  useEffect(() => {
+    Dimensions.addEventListener('change', onChange);
+    return () => {
+      Dimensions.removeEventListener('change', onChange);
+    };
+  });
+
   return (
     <View
       style={{
@@ -154,6 +172,23 @@ const HellowComponents = () => {
       <ActivityIndicator size="large" color="#00ff00" />
       <Text>알림 버튼</Text>
       <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
+      <Text>애니메이션</Text>
+      <Animated.View
+        style={[
+          styles.fadingContainer,
+          {
+            opacity: fadeAnim, // Bind opacity to animated value
+          },
+        ]}>
+        <Text style={styles.fadingText}>Fading View!</Text>
+      </Animated.View>
+      <View style={styles.buttonRow}>
+        <Button title="Fade In" onPress={fadeIn} />
+        <Button title="Fade Out" onPress={fadeOut} />
+      </View>
+      <Text>Dimensions</Text>
+      <Text>{`Window Dimensions: height - ${dimensions.window.height}, width - ${dimensions.window.width}`}</Text>
+      <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text>
     </View>
   );
 };
