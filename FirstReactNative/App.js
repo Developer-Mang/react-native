@@ -23,15 +23,18 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import HellowNative from './Components/HellowNative';
 
-import HellowWorld from 'HellowWorld';
+// import HellowWorld from './Components/HellowWorld';
+import HellowComponets from './Components/HellowComponents';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
+        <HellowComponets></HellowComponets>
+        {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
@@ -68,8 +71,7 @@ const App: () => React$Node = () => {
             </View>
             <LearnMoreLinks />
           </View>
-          <HellowWorld />
-        </ScrollView>
+        </ScrollView> */}
       </SafeAreaView>
     </>
   );

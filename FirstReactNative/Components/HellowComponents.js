@@ -9,6 +9,7 @@ import {
   Button,
   StyleSheet,
   Dimensions,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 const styles = StyleSheet.create({
