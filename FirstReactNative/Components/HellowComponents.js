@@ -10,6 +10,7 @@ import {
   StyleSheet,
   Dimensions,
   KeyboardAvoidingView,
+  Separator,
 } from 'react-native';
 
 // const styles = StyleSheet.create({
@@ -135,63 +136,67 @@ const HellowComponents = () => {
   // });
 
   return (
-    // <View
-    //   style={{
-    //     flex: 1,
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //   }}>
-    //   <Text>버튼 컴포넌트</Text>
-    //   <Button>버튼</Button>
-    //   <Text>스위치 컴포넌트</Text>
-    //   <Switch
-    //     trackColor={{false: '#767577', true: '#81b0ff'}}
-    //     thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-    //     ios_backgroundColor="#3e3e3e"
-    //     onValueChange={toggleSwitch}
-    //     value={isEnabled}
-    //   />
-    //   <Text>리스트 컴포넌트</Text>
-    //   <FlatList
-    //     data={FlatDATA}
-    //     renderItem={renderItem}
-    //     keyExtractor={(item) => item.id}
-    //   />
-    //   <Text>세션 리스트 컴포넌트</Text>
-    //   <SectionList
-    //     sections={SectionDATA}
-    //     keyExtractor={(item, index) => item + index}
-    //     renderItem={({item}) => <Item title={item} />}
-    //     renderSectionHeader={({section: {title}}) => (
-    //       <Text style={styles.header}>{title}</Text>
-    //     )}
-    //   />
-    //   <Text>로딩 이미지</Text>
-    //   <ActivityIndicator />
-    //   <ActivityIndicator size="large" />
-    //   <ActivityIndicator size="small" color="#0000ff" />
-    //   <ActivityIndicator size="large" color="#00ff00" />
-    //   <Text>알림 버튼</Text>
-    //   <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
-    //   <Text>애니메이션</Text>
-    //   <Animated.View
-    //     style={[
-    //       styles.fadingContainer,
-    //       {
-    //         opacity: fadeAnim, // Bind opacity to animated value
-    //       },
-    //     ]}>
-    //     <Text style={styles.fadingText}>Fading View!</Text>
-    //   </Animated.View>
-    //   <View style={styles.buttonRow}>
-    //     <Button title="Fade In" onPress={fadeIn} />
-    //     <Button title="Fade Out" onPress={fadeOut} />
-    //   </View>
-    //   <Text>Dimensions</Text>
-    //   <Text>{`Window Dimensions: height - ${dimensions.window.height}, width - ${dimensions.window.width}`}</Text>
-    //   <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text>
-    // </View>
-  // );
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <Text>버튼 컴포넌트</Text>
+      <Button
+        title="Press me"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
+      <View style={styles.separator} />
+      {/* 
+      <Switch
+        trackColor={{false: '#767577', true: '#81b0ff'}}
+        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+        ios_backgroundColor="#3e3e3e"
+        onValueChange={toggleSwitch}
+        value={isEnabled}
+      />
+      <Text>리스트 컴포넌트</Text>
+      <FlatList
+        data={FlatDATA}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
+      <Text>세션 리스트 컴포넌트</Text>
+      <SectionList
+        sections={SectionDATA}
+        keyExtractor={(item, index) => item + index}
+        renderItem={({item}) => <Item title={item} />}
+        renderSectionHeader={({section: {title}}) => (
+          <Text style={styles.header}>{title}</Text>
+        )}
+      />
+      <Text>로딩 이미지</Text>
+      <ActivityIndicator />
+      <ActivityIndicator size="large" />
+      <ActivityIndicator size="small" color="#0000ff" />
+      <ActivityIndicator size="large" color="#00ff00" />
+      <Text>알림 버튼</Text>
+      <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
+      <Text>애니메이션</Text>
+      <Animated.View
+        style={[
+          styles.fadingContainer,
+          {
+            opacity: fadeAnim, // Bind opacity to animated value
+          },
+        ]}>
+        <Text style={styles.fadingText}>Fading View!</Text>
+      </Animated.View>
+      <View style={styles.buttonRow}>
+        <Button title="Fade In" onPress={fadeIn} />
+        <Button title="Fade Out" onPress={fadeOut} />
+      </View>
+      <Text>Dimensions</Text>
+      <Text>{`Window Dimensions: height - ${dimensions.window.height}, width - ${dimensions.window.width}`}</Text>
+      <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text> */}
+    </View>
+  );
 };
 
 export default HellowComponents;
