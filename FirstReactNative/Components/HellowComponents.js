@@ -159,14 +159,13 @@ const HellowComponents = () => {
         value={isEnabled}
       />
       <Separator />
-      {/* 
-      
-      <Text>리스트 컴포넌트</Text>
+      <Text>플렛 리스트 컴포넌트</Text>
       <FlatList
         data={FlatDATA}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
+      {/* 
       <Text>세션 리스트 컴포넌트</Text>
       <SectionList
         sections={SectionDATA}
