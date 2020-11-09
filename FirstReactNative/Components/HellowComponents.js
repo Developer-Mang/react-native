@@ -10,8 +10,10 @@ import {
   StyleSheet,
   Dimensions,
   KeyboardAvoidingView,
-  Separator,
 } from 'react-native';
+
+// 구분선 컴포넌트
+const Separator = () => <View style={styles.separator} />;
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -142,13 +144,13 @@ const HellowComponents = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Text>버튼 컴포넌트</Text>
+      <Text style={style.title}>버튼 컴포넌트</Text>
       <Button
         title="Press me"
         onPress={() => Alert.alert('Simple Button pressed')}
       />
-      <View style={styles.separator} />
-      {/* 
+      <Separator />
+      <Text style={style.title}>스위치 컴포넌트</Text>
       <Switch
         trackColor={{false: '#767577', true: '#81b0ff'}}
         thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
@@ -156,6 +158,9 @@ const HellowComponents = () => {
         onValueChange={toggleSwitch}
         value={isEnabled}
       />
+      <Separator />
+      {/* 
+      
       <Text>리스트 컴포넌트</Text>
       <FlatList
         data={FlatDATA}
