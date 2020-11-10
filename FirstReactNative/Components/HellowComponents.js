@@ -165,7 +165,7 @@ const HellowComponents = () => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />
-      {/* 
+      <Separator />
       <Text>세션 리스트 컴포넌트</Text>
       <SectionList
         sections={SectionDATA}
@@ -175,6 +175,9 @@ const HellowComponents = () => {
           <Text style={styles.header}>{title}</Text>
         )}
       />
+      <Separator />
+
+      {/* 
       <Text>로딩 이미지</Text>
       <ActivityIndicator />
       <ActivityIndicator size="large" />
