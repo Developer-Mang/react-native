@@ -176,15 +176,16 @@ const HellowComponents = () => {
         )}
       />
       <Separator />
-
-      {/* 
       <Text>로딩 이미지</Text>
       <ActivityIndicator />
       <ActivityIndicator size="large" />
       <ActivityIndicator size="small" color="#0000ff" />
       <ActivityIndicator size="large" color="#00ff00" />
+      <Separator />
       <Text>알림 버튼</Text>
       <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
+      <Separator />
+      {/* 
       <Text>애니메이션</Text>
       <Animated.View
         style={[
