@@ -185,7 +185,6 @@ const HellowComponents = () => {
       <Text>알림 버튼</Text>
       <Button title={'2-Button Alert'} onPress={createTwoButtonAlert} />
       <Separator />
-      {/* 
       <Text>애니메이션</Text>
       <Animated.View
         style={[
@@ -200,6 +199,8 @@ const HellowComponents = () => {
         <Button title="Fade In" onPress={fadeIn} />
         <Button title="Fade Out" onPress={fadeOut} />
       </View>
+      <Text>Fade IN/Fade Out animation Button</Text>
+      {/* 
       <Text>Dimensions</Text>
       <Text>{`Window Dimensions: height - ${dimensions.window.height}, width - ${dimensions.window.width}`}</Text>
       <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text> */}
