@@ -15,27 +15,28 @@ import {
 // 구분선 컴포넌트
 const Separator = () => <View style={styles.separator} />;
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   fadingContainer: {
-//     paddingVertical: 8,
-//     paddingHorizontal: 16,
-//     backgroundColor: 'powderblue',
-//   },
-//   fadingText: {
-//     fontSize: 28,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   buttonRow: {
-//     flexDirection: 'row',
-//     marginVertical: 16,
-//   },
-// });
+// style
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fadingContainer: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    backgroundColor: 'powderblue',
+  },
+  fadingText: {
+    fontSize: 28,
+    textAlign: 'center',
+    margin: 10,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    marginVertical: 16,
+  },
+});
 
 // Dimensions
 // const windowWidth = Dimensions.get('window').width;
