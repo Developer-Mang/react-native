@@ -43,88 +43,90 @@ const styles = StyleSheet.create({
 // const windowHeight = Dimensions.get('window').height;
 
 const HellowComponents = () => {
-  // const [isEnabled, setIsEnabled] = useState(false);
+  // For switch component
+  const [isEnabled, setIsEnabled] = useState(false);
   // const [dimensions, setDimensions] = useState({window, screen});
 
-  // // 스위치 컴포넌트
-  // const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  // switch component
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
-  // // 플렛 리스트 컴포넌트
-  // const FlatDATA = [
-  //   {
-  //     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-  //     title: 'First Item',
-  //   },
-  //   {
-  //     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-  //     title: 'Second Item',
-  //   },
-  //   {
-  //     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-  //     title: 'Third Item',
-  //   },
-  // ];
-  // const Item = ({title}) => (
-  //   <View style={styles.item}>
-  //     <Text style={styles.title}>{title}</Text>
-  //   </View>
-  // );
-  // const renderItem = ({item}) => <Item title={item.title} />;
+  // FlatList component
+  const FlatDATA = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+  ];
+  const Item = ({title}) => (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
+  const renderItem = ({item}) => <Item title={item.title} />;
 
-  // // 세션 리스트 컴포넌트
-  // const SectionDATA = [
-  //   {
-  //     title: 'Main dishes',
-  //     data: ['Pizza', 'Burger', 'Risotto'],
-  //   },
-  //   {
-  //     title: 'Sides',
-  //     data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
-  //   },
-  //   {
-  //     title: 'Drinks',
-  //     data: ['Water', 'Coke', 'Beer'],
-  //   },
-  //   {
-  //     title: 'Desserts',
-  //     data: ['Cheese Cake', 'Ice Cream'],
-  //   },
-  // ];
+  // SectionList component
+  const SectionDATA = [
+    {
+      title: 'Main dishes',
+      data: ['Pizza', 'Burger', 'Risotto'],
+    },
+    {
+      title: 'Sides',
+      data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+    },
+    {
+      title: 'Drinks',
+      data: ['Water', 'Coke', 'Beer'],
+    },
+    {
+      title: 'Desserts',
+      data: ['Cheese Cake', 'Ice Cream'],
+    },
+  ];
 
-  // // Alert 버튼
-  // const createTwoButtonAlert = () =>
-  //   Alert.alert(
-  //     'Alert Title',
-  //     'My Alert Msg',
-  //     [
-  //       {
-  //         text: 'Cancel',
-  //         onPress: () => console.log('Cancel Pressed'),
-  //         style: 'cancel',
-  //       },
-  //       {text: 'OK', onPress: () => console.log('OK Pressed')},
-  //     ],
-  //     {cancelable: false},
-  //   );
+  // Alert 버튼
+  const createTwoButtonAlert = () =>
+    Alert.alert(
+      'Alert Title',
+      'My Alert Msg',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      {cancelable: false},
+    );
 
-  // // fadein/out
-  // const fadeAnim = useRef(new Animated.Value(0)).current;
+  // animation component
+  // fadein/out
+  const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // const fadeIn = () => {
-  //   // Will change fadeAnim value to 1 in 5 seconds
-  //   Animated.timing(fadeAnim, {
-  //     toValue: 1,
-  //     duration: 5000,
-  //   }).start();
-  // };
+  const fadeIn = () => {
+    // Will change fadeAnim value to 1 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 5000,
+    }).start();
+  };
 
-  // const fadeOut = () => {
-  //   // Will change fadeAnim value to 0 in 5 seconds
-  //   Animated.timing(fadeAnim, {
-  //     toValue: 0,
-  //     duration: 5000,
-  //   }).start();
-  // };
+  const fadeOut = () => {
+    // Will change fadeAnim value to 0 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 5000,
+    }).start();
+  };
 
   // // dimension change
   // const onChange = ({window, screen}) => {
