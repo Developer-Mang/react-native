@@ -39,13 +39,14 @@ const styles = StyleSheet.create({
 });
 
 // Dimensions
-// const windowWidth = Dimensions.get('window').width;
-// const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const HellowComponents = () => {
   // For switch component
   const [isEnabled, setIsEnabled] = useState(false);
-  // const [dimensions, setDimensions] = useState({window, screen});
+  // For Demention component
+  const [dimensions, setDimensions] = useState({window, screen});
 
   // switch component
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -129,16 +130,16 @@ const HellowComponents = () => {
   };
 
   // // dimension change
-  // const onChange = ({window, screen}) => {
-  //   setDimensions({window, screen});
-  // };
+  const onChange = ({window, screen}) => {
+    setDimensions({window, screen});
+  };
 
-  // useEffect(() => {
-  //   Dimensions.addEventListener('change', onChange);
-  //   return () => {
-  //     Dimensions.removeEventListener('change', onChange);
-  //   };
-  // });
+  useEffect(() => {
+    Dimensions.addEventListener('change', onChange);
+    return () => {
+      Dimensions.removeEventListener('change', onChange);
+    };
+  });
 
   return (
     <View
@@ -203,10 +204,10 @@ const HellowComponents = () => {
         <Button title="Fade Out" onPress={fadeOut} />
       </View>
       <Text>Fade IN/Fade Out animation Button</Text>
-      {/* 
+      <Separator />
       <Text>Dimensions</Text>
       <Text>{`Window Dimensions: height - ${dimensions.window.height}, width - ${dimensions.window.width}`}</Text>
-      <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text> */}
+      <Text>{`Screen Dimensions: height - ${dimensions.screen.height}, width - ${dimensions.screen.width}`}</Text>
     </View>
   );
 };
