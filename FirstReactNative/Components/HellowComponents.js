@@ -64,6 +64,10 @@ const styles = StyleSheet.create({
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+// For links
+const supportedURL = 'https://google.com';
+const unsupportedURL = 'slack://open?team=123456';
+
 const HellowComponents = () => {
   // For switch component
   const [isEnabled, setIsEnabled] = useState(false);
@@ -156,6 +160,24 @@ const HellowComponents = () => {
     setDimensions({window, screen});
   };
 
+  // For links
+  const OpenURLButton = ({url, children}) => {
+    const handlePress = useCallback(async () => {
+      // Checking if the link is supported for links with custom URL scheme.
+      const supported = await Linking.canOpenURL(url);
+
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(url);
+      } else {
+        Alert.alert(`Don't know how to open this URL: ${url}`);
+      }
+    }, [url]);
+
+    return <Button title={children} onPress={handlePress} />;
+  };
+
   useEffect(() => {
     Dimensions.addEventListener('change', onChange);
     return () => {
@@ -244,6 +266,9 @@ const HellowComponents = () => {
           </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
+      <Separator />
+      <OpenURLButton url={supportedURL}>Open Supported URL</OpenURLButton>
+      <OpenURLButton url={unsupportedURL}>Open Unsupported URL</OpenURLButton>
     </View>
   );
 };
