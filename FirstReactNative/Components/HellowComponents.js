@@ -73,6 +73,8 @@ const HellowComponents = () => {
   const [isEnabled, setIsEnabled] = useState(false);
   // For Demention component
   const [dimensions, setDimensions] = useState({window, screen});
+  // For Model
+  const [modalVisible, setModalVisible] = useState(false);
 
   // switch component
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -269,6 +271,29 @@ const HellowComponents = () => {
       <Separator />
       <OpenURLButton url={supportedURL}>Open Supported URL</OpenURLButton>
       <OpenURLButton url={unsupportedURL}>Open Unsupported URL</OpenURLButton>
+      <Separator />
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Hello World!</Text>
+
+            <TouchableHighlight
+              style={{...styles.openButton, backgroundColor: '#2196F3'}}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+              }}>
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </TouchableHighlight>
+          </View>
+        </View>
+        ble
+      </Modal>
     </View>
   );
 };
