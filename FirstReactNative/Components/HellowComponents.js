@@ -10,6 +10,8 @@ import {
   Dimensions,
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
+  PixelRatio,
+  ScrollView,
   TextInput,
   Platform,
   StyleSheet,
@@ -67,6 +69,14 @@ const windowHeight = Dimensions.get('window').height;
 // For links
 const supportedURL = 'https://google.com';
 const unsupportedURL = 'slack://open?team=123456';
+
+// For Pixel patio
+const size = 50;
+const cat = {
+  uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
+  width: size,
+  height: size,
+};
 
 const HellowComponents = () => {
   // For switch component
@@ -294,6 +304,35 @@ const HellowComponents = () => {
         </View>
         ble
       </Modal>
+      <Separator />
+      <ScrollView style={styles.scrollContainer}>
+        <View style={styles.container}>
+          <Text>Current Pixel Ratio is:</Text>
+          <Text style={styles.value}>{PixelRatio.get()}</Text>
+        </View>
+        <View style={styles.container}>
+          <Text>Current Font Scale is:</Text>
+          <Text style={styles.value}>{PixelRatio.getFontScale()}</Text>
+        </View>
+        <View style={styles.container}>
+          <Text>On this device images with a layout width of</Text>
+          <Text style={styles.value}>{size} px</Text>
+          <Image source={cat} />
+        </View>
+        <View style={styles.container}>
+          <Text>require images with a pixel width of</Text>
+          <Text style={styles.value}>
+            {PixelRatio.getPixelSizeForLayoutSize(size)} px
+          </Text>
+          <Image
+            source={cat}
+            style={{
+              width: PixelRatio.getPixelSizeForLayoutSize(size),
+              height: PixelRatio.getPixelSizeForLayoutSize(size),
+            }}
+          />
+        </View>
+      </ScrollView>
     </View>
   );
 };
