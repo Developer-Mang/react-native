@@ -12,6 +12,8 @@ import {
   TouchableWithoutFeedback,
   PixelRatio,
   ScrollView,
+  RefreshControl,
+  SafeAreaView,
   TextInput,
   Platform,
   StyleSheet,
@@ -333,6 +335,15 @@ const HellowComponents = () => {
           />
         </View>
       </ScrollView>
+      <SafeAreaView style={styles.container}>
+        <ScrollView
+          contentContainerStyle={styles.scrollView}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }>
+          <Text>Pull down to see RefreshControl indicator</Text>
+        </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };
