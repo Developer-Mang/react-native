@@ -26,14 +26,16 @@ import {
 import HellowNative from './Components/HellowNative';
 
 // import HellowWorld from './Components/HellowWorld';
-import HellowComponets from './Components/HellowComponents';
+// import HellowComponets from './Components/HellowComponents';
 
 const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <HellowComponets></HellowComponets>
+        <View>
+          <Text>확인용</Text>
+        </View>
         {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
