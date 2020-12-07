@@ -21,207 +21,205 @@ import {
 } from 'react-native';
 
 // // style
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   fadingContainer: {
-//     paddingVertical: 8,
-//     paddingHorizontal: 16,
-//     backgroundColor: 'powderblue',
-//   },
-//   fadingText: {
-//     fontSize: 28,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   buttonRow: {
-//     flexDirection: 'row',
-//     marginVertical: 16,
-//   },
-//   inner: {
-//     padding: 24,
-//     flex: 1,
-//     justifyContent: 'space-around',
-//   },
-//   header: {
-//     fontSize: 36,
-//     marginBottom: 48,
-//   },
-//   textInput: {
-//     height: 40,
-//     borderColor: '#000000',
-//     borderBottomWidth: 1,
-//     marginBottom: 36,
-//   },
-//   btnContainer: {
-//     backgroundColor: 'white',
-//     marginTop: 12,
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fadingContainer: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    backgroundColor: 'powderblue',
+  },
+  fadingText: {
+    fontSize: 28,
+    textAlign: 'center',
+    margin: 10,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    marginVertical: 16,
+  },
+  inner: {
+    padding: 24,
+    flex: 1,
+    justifyContent: 'space-around',
+  },
+  header: {
+    fontSize: 36,
+    marginBottom: 48,
+  },
+  textInput: {
+    height: 40,
+    borderColor: '#000000',
+    borderBottomWidth: 1,
+    marginBottom: 36,
+  },
+  btnContainer: {
+    backgroundColor: 'white',
+    marginTop: 12,
+  },
+});
 
-// // 구분선 컴포넌트
-// const Separator = () => <View style={styles.separator} />;
+// 구분선 컴포넌트
+const Separator = () => <View style={styles.separator} />;
 
-// // Dimensions
-// const windowWidth = Dimensions.get('window').width;
-// const windowHeight = Dimensions.get('window').height;
+// Dimensions
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
-// // For links
-// const supportedURL = 'https://google.com';
-// const unsupportedURL = 'slack://open?team=123456';
+// For links
+const supportedURL = 'https://google.com';
+const unsupportedURL = 'slack://open?team=123456';
 
-// // For Pixel patio
-// const size = 50;
-// const cat = {
-//   uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
-//   width: size,
-//   height: size,
-// };
+// For Pixel patio
+const size = 50;
+const cat = {
+  uri: 'https://reactnative.dev/docs/assets/p_cat1.png',
+  width: size,
+  height: size,
+};
 
 const HellowComponents = () => {
-  // // For switch component
-  // const [isEnabled, setIsEnabled] = useState(false);
-  // // For Demention component
-  // const [dimensions, setDimensions] = useState({window, screen});
-  // // For Model
-  // const [modalVisible, setModalVisible] = useState(false);
+  // For switch component
+  const [isEnabled, setIsEnabled] = useState(false);
+  // For Demention component
+  const [dimensions, setDimensions] = useState({window, screen});
+  // For Model
+  const [modalVisible, setModalVisible] = useState(false);
 
-  // // switch component
-  // const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  // switch component
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
-  // // FlatList component
-  // const FlatDATA = [
-  //   {
-  //     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-  //     title: 'First Item',
-  //   },
-  //   {
-  //     id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-  //     title: 'Second Item',
-  //   },
-  //   {
-  //     id: '58694a0f-3da1-471f-bd96-145571e29d72',
-  //     title: 'Third Item',
-  //   },
-  // ];
-  // const Item = ({title}) => (
-  //   <View style={styles.item}>
-  //     <Text style={styles.title}>{title}</Text>
-  //   </View>
-  // );
-  // const renderItem = ({item}) => <Item title={item.title} />;
+  // FlatList component
+  const FlatDATA = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+  ];
+  const Item = ({title}) => (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
+  const renderItem = ({item}) => <Item title={item.title} />;
 
-  // // SectionList component
-  // const SectionDATA = [
-  //   {
-  //     title: 'Main dishes',
-  //     data: ['Pizza', 'Burger', 'Risotto'],
-  //   },
-  //   {
-  //     title: 'Sides',
-  //     data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
-  //   },
-  //   {
-  //     title: 'Drinks',
-  //     data: ['Water', 'Coke', 'Beer'],
-  //   },
-  //   {
-  //     title: 'Desserts',
-  //     data: ['Cheese Cake', 'Ice Cream'],
-  //   },
-  // ];
+  // SectionList component
+  const SectionDATA = [
+    {
+      title: 'Main dishes',
+      data: ['Pizza', 'Burger', 'Risotto'],
+    },
+    {
+      title: 'Sides',
+      data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
+    },
+    {
+      title: 'Drinks',
+      data: ['Water', 'Coke', 'Beer'],
+    },
+    {
+      title: 'Desserts',
+      data: ['Cheese Cake', 'Ice Cream'],
+    },
+  ];
 
-  // // Alert 버튼
-  // const createTwoButtonAlert = () =>
-  //   Alert.alert(
-  //     'Alert Title',
-  //     'My Alert Msg',
-  //     [
-  //       {
-  //         text: 'Cancel',
-  //         onPress: () => console.log('Cancel Pressed'),
-  //         style: 'cancel',
-  //       },
-  //       {text: 'OK', onPress: () => console.log('OK Pressed')},
-  //     ],
-  //     {cancelable: false},
-  //   );
+  // Alert 버튼
+  const createTwoButtonAlert = () =>
+    Alert.alert(
+      'Alert Title',
+      'My Alert Msg',
+      [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      {cancelable: false},
+    );
 
-  // // animation component
-  // // fadein/out
-  // const fadeAnim = useRef(new Animated.Value(0)).current;
+  // animation component
+  // fadein/out
+  const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // const fadeIn = () => {
-  //   // Will change fadeAnim value to 1 in 5 seconds
-  //   Animated.timing(fadeAnim, {
-  //     toValue: 1,
-  //     duration: 5000,
-  //   }).start();
-  // };
+  const fadeIn = () => {
+    // Will change fadeAnim value to 1 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 5000,
+    }).start();
+  };
 
-  // const fadeOut = () => {
-  //   // Will change fadeAnim value to 0 in 5 seconds
-  //   Animated.timing(fadeAnim, {
-  //     toValue: 0,
-  //     duration: 5000,
-  //   }).start();
-  // };
+  const fadeOut = () => {
+    // Will change fadeAnim value to 0 in 5 seconds
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 5000,
+    }).start();
+  };
 
-  // // // dimension change
-  // const onChange = ({window, screen}) => {
-  //   setDimensions({window, screen});
-  // };
+  // // dimension change
+  const onChange = ({window, screen}) => {
+    setDimensions({window, screen});
+  };
 
-  // // For links
-  // const OpenURLButton = ({url, children}) => {
-  //   const handlePress = useCallback(async () => {
-  //     // Checking if the link is supported for links with custom URL scheme.
-  //     const supported = await Linking.canOpenURL(url);
+  // For links
+  const OpenURLButton = ({url, children}) => {
+    const handlePress = useCallback(async () => {
+      // Checking if the link is supported for links with custom URL scheme.
+      const supported = await Linking.canOpenURL(url);
 
-  //     if (supported) {
-  //       // Opening the link with some app, if the URL scheme is "http" the web link should be opened
-  //       // by some browser in the mobile
-  //       await Linking.openURL(url);
-  //     } else {
-  //       Alert.alert(`Don't know how to open this URL: ${url}`);
-  //     }
-  //   }, [url]);
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(url);
+      } else {
+        Alert.alert(`Don't know how to open this URL: ${url}`);
+      }
+    }, [url]);
 
-  //   return <Button title={children} onPress={handlePress} />;
-  // };
+    return <Button title={children} onPress={handlePress} />;
+  };
 
-  // useEffect(() => {
-  //   Dimensions.addEventListener('change', onChange);
-  //   return () => {
-  //     Dimensions.removeEventListener('change', onChange);
-  //   };
-  // });
+  useEffect(() => {
+    Dimensions.addEventListener('change', onChange);
+    return () => {
+      Dimensions.removeEventListener('change', onChange);
+    };
+  });
 
-  // // For state bar
-  // const styleTypes = ['default', 'dark-content', 'light-content'];
-  // const [visibleStatusBar, setVisibleStatusBar] = useState(false);
-  // const [styleStatusBar, setStyleStatusBar] = useState(styleTypes[0]);
+  // For state bar
+  const styleTypes = ['default', 'dark-content', 'light-content'];
+  const [visibleStatusBar, setVisibleStatusBar] = useState(false);
+  const [styleStatusBar, setStyleStatusBar] = useState(styleTypes[0]);
 
-  // const changeVisibilityStatusBar = () => {
-  //   setVisibleStatusBar(!visibleStatusBar);
-  // };
+  const changeVisibilityStatusBar = () => {
+    setVisibleStatusBar(!visibleStatusBar);
+  };
 
-  // const changeStyleStatusBar = () => {
-  //   const styleId = styleTypes.indexOf(styleStatusBar) + 1;
+  const changeStyleStatusBar = () => {
+    const styleId = styleTypes.indexOf(styleStatusBar) + 1;
 
-  //   if (styleId === styleTypes.length) {
-  //     return setStyleStatusBar(styleTypes[0]);
-  //   }
-  //   return setStyleStatusBar(styleTypes[styleId]);
-  // };
+    if (styleId === styleTypes.length) {
+      return setStyleStatusBar(styleTypes[0]);
+    }
+    return setStyleStatusBar(styleTypes[styleId]);
+  };
 
   return (
-    <View>
-      <Text>체크</Text>
-      {/*<View
+    <View
       style={{
         flex: 1,
         justifyContent: 'center',
@@ -233,7 +231,7 @@ const HellowComponents = () => {
         onPress={() => Alert.alert('Simple Button pressed')}
       />
       <Separator />
-       <Text style={style.title}>스위치 컴포넌트</Text>
+      <Text style={style.title}>스위치 컴포넌트</Text>
       <Switch
         trackColor={{false: '#767577', true: '#81b0ff'}}
         thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
@@ -386,7 +384,7 @@ const HellowComponents = () => {
           title="Change StatusBar Style"
           onPress={() => changeStyleStatusBar()}
         />
-      </View> */}
+      </View>
     </View>
   );
 };

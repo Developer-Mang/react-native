@@ -33,10 +33,10 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <View>
+        {/* <View>
           <Text>확인용</Text>
-        </View>
-        {/* <ScrollView
+        </View> */}
+        <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
@@ -73,7 +73,7 @@ const App: () => React$Node = () => {
             </View>
             <LearnMoreLinks />
           </View>
-        </ScrollView> */}
+        </ScrollView>
       </SafeAreaView>
     </>
   );
