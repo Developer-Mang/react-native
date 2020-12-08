@@ -225,6 +225,14 @@ const HellowComponents = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
+      <Text style={style.title}>기본 컴포넌트</Text>
+      <TextInput
+        style={{height: 40}}
+        placeholder="Type here to translate!"
+        onChangeText={(text) => setText(text)}
+        defaultValue={text}
+      />
+      <Separator />
       <Text style={style.title}>버튼 컴포넌트</Text>
       <Button
         title="Press me"
